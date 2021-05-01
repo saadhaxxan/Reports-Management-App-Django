@@ -10,7 +10,7 @@
 
 ## Installation steps
 
-1.Clone the Repo and install the requirements
+Clone the Repo and install the requirements
 
 ```
 git clone https://github.com/saadhaxxan/Reports-Management-Django.git
