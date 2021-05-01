@@ -13,8 +13,8 @@
 Clone the Repo and install the requirements
 
 ```
-git clone https://github.com/saadhaxxan/Reports-Management-Django.git
-cd Reports-Management-Django
+git clone https://github.com/saadhaxxan/Reports-Management-App-Django.git
+cd Reports-Management-App-Django
 pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
