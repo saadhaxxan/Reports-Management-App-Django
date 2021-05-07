@@ -3,22 +3,43 @@ from django.views.generic import ListView, DetailView, UpdateView
 from .models import Sale
 from .forms import SalesSearchForm
 import pandas as pd
+from .utils import *
 
 def home(request):
     form = SalesSearchForm(request.POST or None)
     salesdf = None
+    positionsdf = None
     if request.method == 'POST':
         date_from = request.POST.get('date_from')
         date_to = request.POST.get('date_to')
         chart_type = request.POST.get('chart_type')
         qs = Sale.objects.filter(created__date__lte=date_to, created__date__gte=date_from)
         if (len(qs))> 0:
-            salesdf = pd.DataFrame(qs.values()).to_html()
+            salesdf = pd.DataFrame(qs.values())
+            salesdf['customer_id'] = salesdf['customer_id'].apply(get_customer_from_id)
+            salesdf['salesman_id'] = salesdf['salesman_id'].apply(get_saleman_from_id)
+            salesdf.rename({'customer_id':'customer','salesman_id':'salesman'},axis=1,inplace=True)
+            salesdf['created'] = salesdf['created'].apply(lambda x:x.strftime("%Y-%m-%d"))
+            salesdf['updated'] = salesdf['updated'].apply(lambda x:x.strftime("%Y-%m-%d"))
+            position_data = []
+            for sale in qs:
+                for pos in sale.get_positions():
+                    obj = {
+                        'position_id':pos.id,
+                        'product':pos.product.name,
+                        'quantity':pos.quantity,
+                        'price':pos.price,
+                        'sale_id':pos.get_sales_id(),
+                    }
+                    position_data.append(obj)
+            positionsdf = pd.DataFrame(position_data).to_html() 
         else:
             print("No Data")
+        salesdf = salesdf.to_html()
         context = {
         'form':form,
         'salesdf':salesdf,
+        'positionsdf':positionsdf
         }
         return render(request,"sales/home.html ",context)
     context = {
