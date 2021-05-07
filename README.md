@@ -1,7 +1,10 @@
 <div align="center">
 <h1>Reports Management App Django</h1>
 
-<img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png">
+<img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" height="200px" width="200px">
+<img src="https://numfocus.org/wp-content/uploads/2016/07/pandas-logo-300.png" height="200px">
+<br/>
+<img src="https://matplotlib.org/_static/logo2_compressed.svg">
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
