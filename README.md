@@ -1,8 +1,8 @@
 <div align="center">
 <h1>Reports Management App Django</h1>
 
-<img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" height="200px" width="250px">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png" height="200px" width="250px">
+<img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" height="150px" width="250px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png" height="150px" width="250px">
 <br/>
 <img src="https://matplotlib.org/_static/logo2_compressed.svg" height="200px">
 
