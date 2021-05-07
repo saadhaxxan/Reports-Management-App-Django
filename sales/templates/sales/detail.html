@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Detail page
+{% endblock title %}
+{% block content %}
+Sales List Detail
+<br>
+    {{object.pk}}
+    <br>
+    {{object.transaction_id}}
+    <br>
+    {{object.customer}}
+    <br>
+    {{object.sender}}
+{% endblock content %}
+    

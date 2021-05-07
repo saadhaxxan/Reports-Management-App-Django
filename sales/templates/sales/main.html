@@ -1,7 +1,13 @@
-{% extends 'base.html' %} 
-{% block title %} 
-Main Page
-{% endblock title %} 
-{% block content%}
-Hello World
+{% extends 'base.html' %}
+
+{% block title %}
+List page
+{% endblock title %}
+{% block content %}
+Sales List
+<br>
+    {% for obj in object_list %}
+    <a href="{{obj.get_absolute_url}}">{{obj.transaction_id}}</a>
+    {% endfor %}
 {% endblock content %}
+    
