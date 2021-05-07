@@ -1,7 +1,7 @@
 <div align="center">
 <h1>Reports Management App Django</h1>
 
-<img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" height='100px' width='100px'>
+<img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" height='70'>
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
