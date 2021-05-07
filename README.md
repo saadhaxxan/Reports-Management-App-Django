@@ -1,6 +1,10 @@
 <div align="center">
 <h1>Reports Management App Django</h1>
-  
+
+<div class="center">
+    <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png">
+</div>
+
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![GitHub contributors](https://img.shields.io/github/contributors/Naereen/StrapDown.js.svg)](https://GitHub.com/saadhaxxan/Reports-Management-Django/graphs/contributors/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
