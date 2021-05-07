@@ -1,7 +1,21 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block title %} 
 Main Page
 {% endblock title %} 
 {% block content%}
-Hello World
+<form action="" method="POST">
+{% csrf_token %}
+{{form|crispy}}
+<button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form>
+<br/>
+<hr/>
+
+{% if salesdf %}
+    {{salesdf|safe}}
+    {% else %}
+    <h3> No DATA</h3>
+{% endif %}
+    
 {% endblock content %}
