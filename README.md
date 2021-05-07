@@ -1,10 +1,10 @@
 <div align="center">
 <h1>Reports Management App Django</h1>
 
-<img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" height="200px" width="400px">
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png" height="200px">
+<img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.png" height="200px" width="300px">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png" height="200px" width="200px">
 <br/>
-<img src="https://matplotlib.org/_static/logo2_compressed.svg">
+<img src="https://matplotlib.org/_static/logo2_compressed.svg" height="200px" width="200px">
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
