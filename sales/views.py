@@ -10,6 +10,7 @@ def home(request):
     salesdf = None
     positionsdf = None
     merged_df = None
+    df = None
     if request.method == 'POST':
         date_from = request.POST.get('date_from')
         date_to = request.POST.get('date_to')
@@ -35,16 +36,20 @@ def home(request):
                     position_data.append(obj)
             positionsdf = pd.DataFrame(position_data)
             merged_df = pd.merge(salesdf,positionsdf,on='sales_id') 
+            df = merged_df.groupby('transaction_id',as_index=False)['price'].agg('sum')
+            get_chart(chart_type,df,labels=df['transaction_id'].values)
         else:
             print("No Data")
         salesdf = salesdf.to_html()
         positionsdf = positionsdf.to_html()
         merged_df = merged_df.to_html()
+        df = df.to_html()
         context = {
         'form':form,
         'salesdf':salesdf,
         'positionsdf':positionsdf,
         'merged_df':merged_df,
+        'df':df,
         }
         return render(request,"sales/home.html ",context)
     context = {

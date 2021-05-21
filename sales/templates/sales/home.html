@@ -13,11 +13,17 @@ Main Page
 <hr/>
 
 {% if salesdf %}
+<h4>Sales Data</h4>
     {{salesdf|safe}}
     <hr/>
+    <h4>Positions Data</h4>
     {{positionsdf|safe}}
     <hr/>
+    <h4>Combined Data</h4>
     {{merged_df|safe}}
+    <hr/>
+    <h4>Grouped Data</h4>
+    {{df|safe}}
     {% else %}
     <h3> No DATA</h3>
 {% endif %}
