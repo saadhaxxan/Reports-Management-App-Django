@@ -19,6 +19,7 @@ def get_graph():
 
 def get_chart(chart_type,data,**kwargs):
     plt.switch_backend('AGG')
+    fig = plt.figure(figsize=(10,4))
     if chart_type == "#1":
         print("bar chart")
         plt.bar(data['transaction_id'],data['price'])
@@ -31,6 +32,7 @@ def get_chart(chart_type,data,**kwargs):
         print("line chart")
     else:
         print("chart generation failed")
+    plt.tight_layout()
     chart = get_graph()
     return chart
 
